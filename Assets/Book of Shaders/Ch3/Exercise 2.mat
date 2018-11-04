@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Excercise 1
-  m_Shader: {fileID: 4800000, guid: a3d29050a8c7c9247a59a37a6e6e19b7, type: 3}
+  m_Name: Exercise 2
+  m_Shader: {fileID: 4800000, guid: 0a8cfddc71713a14b9e596e61e41c566, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0

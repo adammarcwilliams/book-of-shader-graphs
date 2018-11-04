@@ -201,6 +201,7 @@ GameObject:
   - component: {fileID: 1459758101}
   - component: {fileID: 1459758100}
   - component: {fileID: 1459758099}
+  - component: {fileID: 1459758103}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -237,7 +238,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: ed9acf77bb91f4f40ac906c7e6787a48, type: 2}
+  - {fileID: 2100000, guid: 09b6ee143dfda9e4ab7a3cbe94587895, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -277,3 +278,14 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!114 &1459758103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1459758098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 343807de382ba4a49b9e391bd3deb627, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
