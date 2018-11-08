@@ -2,28 +2,29 @@
 using UnityEditor.ShaderGraph;
 using System.Reflection;
 
-[Title("Eases", "Sine Out")]
-public class SineOutNode : CodeFunctionNode {
+[Title("Eases", "Sine In")]
+public class SineInNode : CodeFunctionNode
+{
 
-    public SineOutNode()
+    public SineInNode()
     {
-        name = "Sine Out";
+        name = "Sine In";
     }
 
     protected override MethodInfo GetFunctionToConvert()
     {
-        return GetType().GetMethod("SineOut",
+        return GetType().GetMethod("SineIn",
             BindingFlags.Static | BindingFlags.NonPublic);
     }
 
-    static string SineOut(
+    static string SineIn(
         [Slot(0, Binding.None)] DynamicDimensionVector T,
         [Slot(1, Binding.None)] out DynamicDimensionVector Out)
     {
         return
             @"
 {
-    Out = sin(T * HALF_PI);
+    Out = sin((T - 1.0) * HALF_PI) + 1.0;
 }
 ";
     }
