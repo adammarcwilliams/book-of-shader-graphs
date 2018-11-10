@@ -2,29 +2,36 @@
 using UnityEditor.ShaderGraph;
 using System.Reflection;
 
-[Title("Eases", "Quintic Out")]
-public class QuinticOutNode : CodeFunctionNode
+[Title("Eases", "Quadractic In Out")]
+public class QuadracticInOutNode : CodeFunctionNode
 {
 
-    public QuinticOutNode()
+    public QuadracticInOutNode()
     {
-        name = "Quintic Out";
+        name = "Quadractic In Out";
     }
 
     protected override MethodInfo GetFunctionToConvert()
     {
-        return GetType().GetMethod("QuinticOut",
+        return GetType().GetMethod("QuadracticInOut",
             BindingFlags.Static | BindingFlags.NonPublic);
     }
 
-    static string QuinticOut(
+    static string QuadracticInOut(
         [Slot(0, Binding.None)] DynamicDimensionVector T,
         [Slot(1, Binding.None)] out DynamicDimensionVector Out)
     {
         return
             @"
 {
-    Out = pow(T - 1.0, 5.0) + 1.0;
+    if(T < 0.5)
+	{
+		Out = 2 * T * T;
+	}
+	else
+	{
+		Out = (-2 * T * T) + (4 * T) - 1;
+	}
 }
 ";
     }

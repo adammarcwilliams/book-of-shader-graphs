@@ -24,9 +24,15 @@ public class QuinticInOutNode : CodeFunctionNode
         return
             @"
 {
-    Out = t < 0.5
-        ? +16.0 * pow(T, 5.0)
-        : -0.5 * pow(2.0 * T - 2.0, 5.0) + 1.0;
+    if (T < 0.5)
+    {
+        Out = 16 * pow(T, 5.0);    
+    }
+    else
+    {
+        float f = ((2.0 * T) - 2.0);
+        Out = (0.5 * pow(f, 5.0)) + 1; 
+    }
 }
 ";
     }
